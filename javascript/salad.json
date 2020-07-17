@@ -1,0 +1,23 @@
+[
+    {
+        "name":"Caesar Salad",
+        "pic":"pic/menu/caesar_Salad.webp",
+        "price":15.5,
+        "qty":0,
+        "content":"Lettuce, bacon, Parmesan cheese and our own Caesar dressing with our big house-made cheesy croutons."
+    },
+    {
+        "name":"Chicken Caesar Salad",
+        "pic":"pic/menu/chicken_Caesar_Salad.webp",
+        "price":19.5,
+        "qty":0,
+        "content":"Caesar salad with grilled seasoned chicken."
+    },
+    {
+        "name":"Greek Salad",
+        "pic":"pic/menu/greek_Salad.webp",
+        "price":15.5,
+        "qty":0,
+        "content":"With lettuce, feta cheese and olives."
+    }
+]

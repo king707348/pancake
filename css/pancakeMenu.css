@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Aclonica&family=Galada&display=swap&family=Noto+Serif:ital,wght@1,700');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+ul,ol,dl{
+    margin-bottom: 0;
+}
+a{
+    color: #f3f3f3;
+    text-decoration: none;
+}
+.hr-short{
+    width: 10%;
+    margin: .3em auto .8em;
+    border: 1.5px solid #ccc;    
+}
+.midhr{
+    width: 90%;
+    margin: 1.5em auto 1em;
+    border: .5px solid #000;
+}
+.smallhr{
+    display: none;
+}
+
+/*header*/
+header{
+    text-align: center;
+    position: relative;
+    width: 100%;
+}
+.site_navbar{
+    display: flex;
+    justify-content: center;
+    background: #000;
+    color: #f3f3f3;
+    font-family: 'Galada', cursive;
+}
+.site_navbar ul{
+    display: flex;
+    font-size: 20px;
+}
+.site_navbar ul li{
+    margin: auto;
+    padding: 6px 12px;
+}
+label{
+    position: absolute;
+    right: 0;
+    border: 1px solid rgba(255,255,255,.6);
+    height: 5vh;
+    width: 10%;
+    font-size: 24px;
+    margin-bottom: 0;
+    padding: 6px;
+       
+}
+.title{
+    height: 30vh;
+    color: #E8DDCC;
+    background: #550121;
+    font-family: 'Aclonica', sans-serif;
+}
+.title h1{
+    text-align: center;
+    font-size: 4em;
+    letter-spacing: -4px;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.site_navbar ul a:hover,.site_navbar li ul li:hover{
+    color: #aaa;
+    text-decoration: none;
+    transition: .5s;
+}
+.site_navbar li ul{
+    display: none;
+    background: #000;
+    position: absolute;
+    top: 10%;
+    z-index: 1;
+}
+.site_navbar li:hover ul{
+    display: block;
+}
+
+/*MAIN*/
+.main{
+    font-family: 'Noto Serif', serif;
+    text-align: center;
+    width: 100%;
+    background: #FBEDD5;
+}
+.main h1{
+    color: #634115;
+}
+.ul{
+    display: inline;
+}
+.menu-list{
+    display: flex;
+    flex-wrap: nowrap;
+}
+.ul li{
+    display: flex;
+    padding: 8px;
+    text-align: center;    
+}
+.ul>li>img{
+    border: 2px solid #fff;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0,.1) 3px 0;
+}
+.menu-txt{
+    padding: 4px;
+    width: 75%;
+}
+.menu-1{
+    border-right: 1px dashed #000;
+}
+.price p{
+    margin: 3px;
+    font-size: 12.5px;
+}
+.qty span{
+    display: flex;
+}
+
+/*footer*/
+footer{
+    width: 100%;
+    color: #f3f3f3;
+    background: #000;
+    text-align: center;
+    letter-spacing: 2px;
+    line-height: 1.5;
+    padding: 2em;
+    font-family: 'Noto Serif', serif;
+}
+.logo{
+    margin: 0 auto 1em;
+    width: 7%;
+    background: #fff;
+    border-radius: 5px;
+}
+.fab{
+    margin: 6px;
+    font-size: 24px;
+}
+.copyright{
+    font-size: 18px;
+}
+
+@media screen and (max-width:1200px){
+    .logo img{
+        width: 80%;
+    }
+    .menu-txt p{
+       font-size: 14px;
+       margin: 0;
+    }
+}
+@media screen and (max-width:990px){
+    .title{
+        height: 15vh;
+    }
+    .title h1{
+        font-size: 3em;
+    }
+    /*main*/
+    .menu-list{
+        flex-wrap: wrap;
+    }
+    .menu-1{
+        border: none;
+    }
+    .smallhr{
+        display: block;
+    }
+    .ul img{
+        width: 20%;
+    }
+    .menu-txt{
+        width: 70%;
+    }
+    .menu-txt p,.price p{
+        font-size: 1.2em;
+    }
+
+    .ul li{
+        margin: auto;
+    }
+    .price{
+        width: 10%;
+    }
+    .plus,.minus{
+        width: 100%;
+    }
+}
+@media screen and (max-width:768px){
+    .container{
+        max-width: 768px;
+        width: 100%;
+    }
+    .site_navbar{
+        height: 5vh;
+        width: 100%;
+    }
+    .site_navbar ul,.site_navbar ul li{
+        flex-flow: row wrap;          
+    }
+    /*.navbar{
+        display: none;
+    }*/
+    .divbar{
+        width: 100%;
+        z-index: 999;
+    }
+    .site_navbar ul li{
+        background: #000;
+        border-bottom: 1px solid #fff;
+        margin-left: 0;
+        width: 90%;
+    }
+    .navbar:checked~.divbar{
+        display: none;
+    }
+    
+}

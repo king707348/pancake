@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/pancakeMenu.css">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <header>                
+                <div class="site_navbar">                     
+                    <input type="checkbox" name="" class="navbar" id="navbar">                    
+                    <div>
+                        <ul>
+                            <li class="li1">Home</li>
+                            <li class="li1"><a href="">About</a>
+                                <ul class="about-ul">
+                                    <li>functions</li>
+                                    <li>franchising</li>
+                                </ul>
+                            </li>
+                            <li class="li1"><a href="">News</a>
+                            </li>
+                            <li class="li1"><a href="">Gallery</a></li>
+                            <li class="li1"><a href="">Menu</a>
+                                <ul>
+                                    <li>drink</li>
+                                </ul>
+                            </li>
+                            <li class="li1"><a href="">Gift Vouchers</a></li>
+                            <li class="li1"><a href="">Booking</a></li>
+                            <li class="li1"><a href="">Contact</a></li>
+                        </ul>
+                    </div>                    
+                    <label for="navbar">☰</label>                  
+                </div>                      
+                <div class="title">
+                    <h1>THE PANCAKE MANOR</h1>
+                </div>
+            </header>
+            <div class="main">
+                <h1>MENU</h1>
+                <div class="menu-list">
+                    <div class="menu-left">
+                        <div class="menu menu-1">
+                            <h3>Pancake and Waffles</h3>
+                            <div class="pancake-menu">
+                                <ul class="ul" id="ulPancake">
+                                    <!--script-->
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="midhr smallhr">
+                    <div class="menu-right">
+                        <div class="menu menu-2">
+                            <h3>From the Grill</h3>
+                            <div class="grill-menu">
+                                <ul class="ul" id="ulGrill">
+                                    <!--script-->
+                                </ul>
+                            </div>
+                        </div>
+                        <hr class="midhr">
+                        <div class="menu menu-3">
+                            <h3>Salad</h3>
+                            <div class="salad-menu">
+                                <ul class="ul" id="ulSalad">
+                                    <!--script-->
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <footer>
+                <div class="logo">
+                    <img src="pic/pancakeManorLogo.webp" alt="">
+                </div>
+                <div class="where">
+                    <p>CBD-18Charlotte St,Brisbane,QLD 4000 | Mt Gravatt - Westfield Garden City Shopping Center,Upper Mt Gravatt,QLD 4122</p>
+                    <div class="icons">
+                        <a href=""><i class="fab fa-facebook-f"></i></a>
+                        <a href=""><i class="fab fa-instagram"></i></a>
+                    </div>
+                    <div class="copyright">
+                        &copy; 2020 Pancake Manor
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <script>
+        const menu = "javascript/menu.json"
+        const ulPancake = document.querySelector("#ulPancake")      
+        const ulGrill = document.querySelector("#ulGrill")       
+        const ulSalad = document.querySelector("#ulSalad")
+        const menuList = document.querySelector(".menu-list")
+
+        axios.get(menu).then(event=>{
+            console.log(event.data)
+            let data = event.data
+            for(let x = 0; x < data.length;x++){
+                //console.log(data[x])
+                for(let i in data[x]){
+                    //console.log(data[x][i])
+                    const pic = data[x][i].pic
+                    const name = data[x][i].name
+                    const content = data[x][i].content
+                    const price = data[x][i].price
+                    let qty = Number(data[x][i].qty)
+                    let htmlContent = ""                   
+
+                    htmlContent =`<li>
+                                <img src="${pic}">
+                                <div class="menu-txt">
+                                    <h4>${name}</h4>                                           
+                                    <p>${content}</p>
+                                </div>
+                                <div class="price">
+                                    <p>${price}</p>
+                                    <span class="qty">
+                                        Qty:<p>${qty}</p>
+                                        <span>                        
+                                            <i class="fas fa-plus-circle plus"></i>
+                                            <i class="fas fa-minus-circle minus"></i>    
+                                        </sapn>                                    
+                                    </span>
+                                </div>
+                            </li>`
+
+                    if(x === 0){
+                        ulPancake.innerHTML += htmlContent                        
+                    }else if(x === 1){
+                        ulGrill.innerHTML += htmlContent
+                    }else{
+                        ulSalad.innerHTML += htmlContent
+                    }                
+                }
+            } 
+            menuList.addEventListener("click",function(e){
+                let add = e.target.classList.contains("plus")
+                let minus = e.target.classList.contains("minus")
+                const num = e.target.parentElement.parentElement.children[0]
+                let score = Number(num.innerHTML)
+                if(add){
+                    num.innerHTML = score + 1                   
+                }else if(minus){
+                    if( score > 0){
+                        num.innerHTML = score - 1
+                    }
+                }
+            })
+         
+        }).catch(err => console.log(err))  
+    </script>
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</body>
+</html>
