@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/pancake_manor/css/contact.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <header>                
+                <div class="site_navbar">                     
+                    <input type="checkbox" id="navbar">                                      
+                    <div class="divbar">
+                        <ul>
+                            <li class="li1"><a href="pancakeManor.html">Home</a></li>
+                            <li class="li1"><a href="">About</a>
+                                <ul class="about-ul">
+                                    <li>functions</li>
+                                    <li>franchising</li>
+                                </ul>
+                            </li>
+                            <li class="li1"><a href="">News</a></li>
+                            <li class="li1"><a href="">Gallery</a></li>
+                            <li class="li1"><a href="pancakeMenu.html">Menu</a></li>
+                            <li class="li1"><a href="">Gift Vouchers</a></li>
+                            <li class="li1"><a href="">Booking</a></li>
+                            <li class="li1"><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div> 
+                    <label for="navbar">☰</label>                                             
+                </div>                      
+                <div class="title">
+                    <h1>THE PANCAKE MANOR</h1>
+                </div>
+            </header>
+            <div class="main">
+                <h1>Locations</h1>
+                <hr class="midhr">
+                <div class="loc loc1">
+                    <div class="where">
+                        <h3>CBD</h3>
+                        <p>18 Charlotte St,Brisbane,QLD 4000</p>
+                        <P>(07)3221 6433</P>
+                        <p>7day 24hrs</p>
+                        <P>only closed xmas day</P>
+                    </div>
+                    <div class="map map1" >
+
+                    </div>
+                </div>
+                <div class="loc loc2">
+                    <div class="where">
+                        <h3>Garden City</h3>
+                        <p>Westfield Garden City Shopping Center,Upper Mt Gravatt,QLD 4122</p>                                
+                        <p>(07 3349 2662)</p>
+                        <p>7days 8am-late</p>                                
+                        <p>(COVID-19 hours may change)</p>
+                        <p>closed labour day/xmas day</p>
+                    </div>
+                    <div class="map map2" >
+                        
+                    </div>
+                </div>
+            </div>
+            <footer>
+                <div class="logo">
+                    <img src="pic/pancakeManorLogo.webp" alt="">
+                </div>
+                <div class="where">
+                    <p>CBD-18Charlotte St,Brisbane,QLD 4000 | Mt Gravatt - Westfield Garden City Shopping Center,Upper Mt Gravatt,QLD 4122</p>
+                    <div class="icons">
+                        <a href=""><i class="fab fa-facebook-f"></i></a>
+                        <a href=""><i class="fab fa-instagram"></i></a>
+                    </div>
+                    <div class="copyright">
+                        &copy; 2020 Pancake Manor
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBMsfQ2T4E-8um2F5OBWqBqIHzzVaxwUws&callback=initMap"
+    async defer></script>
+    <script>
+
+        function initMap(){
+
+            let pancakeLoc = {lat:-27.472129,lng:153.0230693}
+            let mapId = document.querySelector(".map1")
+            let locMap = new google.maps.Map(mapId,{
+                center:pancakeLoc,
+                zoom:15,
+            })
+            let marker = new google.maps.Marker({
+                position:pancakeLoc,
+                map:locMap,
+            })
+
+            let pancakeLoc2 = {lat:-27.5623579,lng:153.0804857}
+            let mapId2 = document.querySelector(".map2")
+            let locMap2 = new google.maps.Map(mapId2,{
+                center:pancakeLoc2,
+                zoom:15,
+            })
+            let marker2 = new google.maps.Marker({
+                position:pancakeLoc2,
+                map:locMap2
+            })
+        }
+        
+
+    </script>
+    
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+</body>
+</html>

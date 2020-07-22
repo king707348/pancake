@@ -19,8 +19,8 @@ a{
 }
 .midhr{
     width: 90%;
-    margin: 1.5em auto 1em;
-    border: .5px solid #000;
+    margin: 1em auto 1em;
+    border: .5px solid #E5C282;
 }
 .smallhr,#navbar,label,.divbar li ul{
     display: none;
@@ -87,47 +87,29 @@ label{
     display: block;
 }
 
-/*MAIN*/
+/*main*/
 .main{
     font-family: 'Noto Serif', serif;
     text-align: center;
     width: 100%;
+    color: #7A674E;
     background: #FBEDD5;
 }
-.main h1{
-    color: #634115;
+.loc{
+    font-size: 14px;
+    font-weight: lighter;
 }
-.ul{
-    display: inline;
+h1{
+    margin-top: 6px;
 }
-.menu-list{
-    display: flex;
-    flex-wrap: nowrap;
+.map{
+    width: 600px;
+    height: 400px;
+    margin: 0 auto 2em;
+    border: 1px solid rgba(0,0,0,.2);
+    box-shadow: 5px 5px 5px rgba(0,0,0,.2);
 }
-.ul li{
-    display: flex;
-    padding: 8px;
-    text-align: center;    
-}
-.ul>li>img{
-    border: 2px solid #fff;
-    border-radius: 5px;
-    box-shadow: rgba(0, 0, 0,.1) 3px 0;
-}
-.menu-txt{
-    padding: 4px;
-    width: 75%;
-}
-.menu-1{
-    border-right: 1px dashed #000;
-}
-.price p{
-    margin: 3px;
-    font-size: 12.5px;
-}
-.qty span{
-    display: flex;
-}
+
 
 /*footer*/
 footer{
@@ -170,36 +152,9 @@ footer{
     .title h1{
         font-size: 3em;
     }
-    /*main*/
-    .menu-list{
-        flex-wrap: wrap;
-    }
-    .menu-1{
-        border: none;
-    }
-    .smallhr{
-        display: block;
-    }
-    .ul img{
-        width: 20%;
-    }
-    .menu-txt{
-        width: 70%;
-    }
-    .menu-txt p,.price p{
-        font-size: 1.2em;
-    }
-
-    .ul li{
-        margin: auto;
-    }
-    .price{
-        width: 10%;
-    }
-    .plus,.minus{
-        width: 100%;
-    }
 }
+
+
 @media screen and (max-width:768px){
     .container{
         max-width: 768px;
@@ -212,7 +167,6 @@ footer{
     .site_navbar ul,.site_navbar ul li{
         flex-flow: row wrap;          
     }
-    
     label{
         display: block;
     }

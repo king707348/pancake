@@ -20,6 +20,9 @@ a{
     margin: .3em auto .8em;
     border: 1.5px solid #ccc;    
 }
+#navbar,label,.divbar li ul{
+    display: none;
+}
 
 /*header*/
 header{
@@ -34,14 +37,25 @@ header{
     color: #f3f3f3;
     font-family: 'Galada', cursive;
 }
-.site_navbar ul{
+.divbar ul{
     display: flex;
     font-size: 20px;
 
 }
-.site_navbar ul li{
+.divbar ul li{
     margin: auto;
     padding: 6px 12px;
+}
+label{
+    position: absolute;
+    right: 0;
+    border: 1px solid rgba(255,255,255,.6);
+    height: 5vh;
+    width: 10%;
+    font-size: 24px;
+    margin-bottom: 0;
+    padding: 6px;
+    z-index: 999;
 }
 .title{
     height: 30vh;
@@ -58,35 +72,31 @@ header{
     transform: translateY(-50%);
 }
 
-.site_navbar ul a:hover,.site_navbar li ul li:hover{
+.divbar ul a:hover,.divbar li ul li:hover{
     color: #aaa;
     text-decoration: none;
     transition: .5s;
-
 }
-.site_navbar li ul{
+.divbar li ul{
     display: none;
     background: #000;
     position: absolute;
     top: 10%;
     z-index: 1;
 }
-.site_navbar li:hover ul{
+.divbar li:hover ul{
     display: block;
-
 }
 
 /*main*/
 
 .main{
     margin: 0;
-
 }
 .story{
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-
 }
 
 .content{
@@ -142,7 +152,6 @@ header{
     
 }
 
-
 .aside-menu{
     position: fixed;
     right: 0;
@@ -154,9 +163,6 @@ header{
     border-radius: 20px 0 0 20px;
     font-family: 'Aclonica', sans-serif;
 }
-
-
-
 
 /*footer*/
 footer{
@@ -184,3 +190,90 @@ footer{
 }
 
 
+@media screen and (max-width:1200px){
+    .logo img{
+        width: 80%;
+    }
+    .menu-txt p{
+       font-size: 14px;
+       margin: 0;
+    }
+}
+@media screen and (max-width:990px){
+    .title{
+        height: 15vh;
+    }
+    .title h1{
+        font-size: 3em;
+    }
+    /*main*/
+    .menu-list{
+        flex-wrap: wrap;
+    }
+    .menu-1{
+        border: none;
+    }
+    .smallhr{
+        display: block;
+    }
+    .ul img{
+        width: 20%;
+    }
+    
+    .ul li{
+        margin: auto;
+    }
+    .content,.pic{
+        width:50%;
+    }
+}
+@media screen and (max-width:768px){
+    .container{
+        max-width: 768px;
+        width: 100%;
+    }
+    .site_navbar{
+        height: 5vh;
+        width: 100%;
+    }
+    .site_navbar ul,.site_navbar ul li{
+        flex-flow: row wrap;          
+    }
+    label{
+        display: block;
+    }
+    .divbar{
+        display: none;
+        width: 100%;
+        z-index: 999;
+    }
+    .site_navbar ul li{
+        background: #000;
+        border-bottom: 1px solid #fff;
+        margin-left: 0;
+        width: 90%;
+    }
+    #navbar:checked~.divbar{
+        display: block;
+        position: absolute;
+        animation: all .5s;
+    }
+    .aside-menu{
+        display: none;
+    }
+}
+@keyframes all {
+    from{
+        top:-300px
+    }
+    to{
+        top: 0;
+    }
+}
+    
+@media screen and (max-width:600px){
+    .content,.pic{
+        width:100%;
+    }
+
+}
