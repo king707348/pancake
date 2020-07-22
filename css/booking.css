@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Aclonica&family=Galada&display=swap&family=Noto+Serif:ital,wght@1,700');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+ul,ol,dl{
+    margin-bottom: 0;
+}
+a{
+    color: #f3f3f3;
+    text-decoration: none;
+}
+.hr-short{
+    width: 10%;
+    margin: .3em auto .8em;
+    border: 1.5px solid #ccc;    
+}
+.midhr{
+    width: 90%;
+    margin: 1em auto 1em;
+    border: .5px solid #E5C282;
+}
+.smallhr,#navbar,label,.divbar li ul{
+    display: none;
+}
+
+/*header*/
+header{
+    text-align: center;
+    position: relative;
+    width: 100%;
+}
+.site_navbar{
+    display: flex;
+    justify-content: center;
+    background: #000;
+    color: #f3f3f3;
+    font-family: 'Galada', cursive; 
+}
+.divbar ul{
+    display: flex;
+    font-size: 20px;
+}
+.divbar ul li{
+    margin: auto;
+    padding: 6px 12px;
+}
+label{
+    position: absolute;
+    right: 0;
+    border: 1px solid rgba(255,255,255,.6);
+    height: 5vh;
+    width: 10%;
+    font-size: 24px;
+    margin-bottom: 0;
+    padding: 6px;
+    z-index: 999;
+}
+.title{
+    height: 30vh;
+    color: #E8DDCC;
+    background: #550121;
+    font-family: 'Aclonica', sans-serif;
+}
+.title h1{
+    text-align: center;
+    font-size: 4em;
+    letter-spacing: -4px;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.divbar ul a:hover{
+    color: #aaa;
+    text-decoration: none;
+    transition: .5s;
+}

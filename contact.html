@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>CONTACT</title>
+    <link rel="shortcut icon" href="/pancake_manor/pic/pancakeManorLogo.webp" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="/pancake_manor/css/contact.css">
@@ -16,17 +17,8 @@
                     <input type="checkbox" id="navbar">                                      
                     <div class="divbar">
                         <ul>
-                            <li class="li1"><a href="pancakeManor.html">Home</a></li>
-                            <li class="li1"><a href="">About</a>
-                                <ul class="about-ul">
-                                    <li>functions</li>
-                                    <li>franchising</li>
-                                </ul>
-                            </li>
-                            <li class="li1"><a href="">News</a></li>
-                            <li class="li1"><a href="">Gallery</a></li>
+                            <li class="li1"><a href="pancakeManor.html">Home</a></li>                           
                             <li class="li1"><a href="pancakeMenu.html">Menu</a></li>
-                            <li class="li1"><a href="">Gift Vouchers</a></li>
                             <li class="li1"><a href="">Booking</a></li>
                             <li class="li1"><a href="contact.html">Contact</a></li>
                         </ul>
@@ -38,7 +30,7 @@
                 </div>
             </header>
             <div class="main">
-                <h1>Locations</h1>
+                <h1>LOCATIONS</h1>
                 <hr class="midhr">
                 <div class="loc loc1">
                     <div class="where">
@@ -49,7 +41,7 @@
                         <P>only closed xmas day</P>
                     </div>
                     <div class="map map1" >
-
+                        <!--script-->
                     </div>
                 </div>
                 <div class="loc loc2">
@@ -62,8 +54,36 @@
                         <p>closed labour day/xmas day</p>
                     </div>
                     <div class="map map2" >
-                        
+                        <!--script-->
                     </div>
+                </div>
+                <div class="feedback">
+                    <h1>FEEDBACK & CONTACT FORM</h1>
+                    <hr class="midhr">
+                    <form action="">
+                        <div class="input_content">
+                            <input type="text" class="input" id="name" placeholder="Name*" required>
+                        </div>
+                        <div class="input_content">
+                            <input type="text" id="email" placeholder="Email*" required>
+                            <p class="feedback"></p>
+                        </div>
+                        <div class="input_content">
+                            <input type="text" id="phone" placeholder="Phone">
+                        </div>
+                        <div class="input_content radio">
+                            <span>LOCATIONS:</span>
+                            <input type="radio" id="r1" name="rr">
+                            <span class="ps1">CBD</span>
+                            <input type="radio" id="r2" name="rr">
+                            <span class="ps2">Garden City</span>
+                        </div>
+                        <div class="input_content">
+                            <input type="text" id="subject" placeholder="Subject">
+                        </div>
+                        <textarea name="" id="text" cols="60%" rows="10%" placeholder="Message"></textarea>
+                        <button class="btn btn-primary">Submit</button>
+                    </form>
                 </div>
             </div>
             <footer>
@@ -111,11 +131,8 @@
                 map:locMap2
             })
         }
-        
-
     </script>
-    
-
+    <script src="/pancake_manor/javascript/forms.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
