@@ -152,18 +152,6 @@ label{
     
 }
 
-.aside-menu{
-    position: fixed;
-    right: 0;
-    bottom: 10%;
-    color: #fff;
-    background: #550121;
-    font-size: 35px;
-    padding: 8px .5em 8px .4em;
-    border-radius: 20px 0 0 20px;
-    font-family: 'Aclonica', sans-serif;
-}
-
 /*footer*/
 footer{
     width: 100%;
