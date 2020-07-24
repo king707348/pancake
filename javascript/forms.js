@@ -17,7 +17,8 @@ form.addEventListener("input",function(e){
         }
     }
 })
-btn.addEventListener("submit",function(){
+btn.addEventListener("submit",function(e){
+    e.preventDefault()
     form.submit()
 })
 

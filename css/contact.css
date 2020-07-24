@@ -209,3 +209,19 @@ footer{
     }
     
 }
+@media screen and (max-width:600px){
+    .container{
+        width: 100%;
+    }
+    .map{
+        width: 80%;
+    }
+}
+@media screen and (max-width:400px){
+    .title h1{
+        font-size: 30px;
+    }
+    textarea{
+        width: 60%;
+    }
+}

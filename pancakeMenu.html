@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menu</title>
-    <link rel="shortcut icon" href="/pancake_manor/pic/pancakeManorLogo.webp" type="image/x-icon">
+    <link rel="shortcut icon" href="pic/pancakeManorLogo.webp" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/pancakeMenu.css">
@@ -63,9 +63,6 @@
                         </div>
                     </div>
                 </div>
-                <div class="order">                
-                    
-                </div>
             </div>
 
             <footer>
@@ -88,11 +85,12 @@
 
     <script>
         const menu = "javascript/menu.json"
+        const cors = 'https://cors-anywhere.herokuapp.com/'
         const ulPancake = document.querySelector("#ulPancake")      
         const ulGrill = document.querySelector("#ulGrill")       
         const ulSalad = document.querySelector("#ulSalad")
         const menuList = document.querySelector(".menu-list")
-
+        
         axios.get(menu).then(event=>{
             console.log(event.data)
             let data = event.data
@@ -135,32 +133,14 @@
                 }
             }
 
-
             menuList.addEventListener("click",function(e){
                 let add = e.target.classList.contains("plus")
                 let minus = e.target.classList.contains("minus")
                 const num = e.target.parentElement.parentElement.children[0]
                 let score = Number(num.innerHTML)
-                const order = document.querySelector(".order")
-                const check = document.querySelector(".check")
-                let summary = `<p>Summary</p>
-                                <hr>
-                                <div class="${check}">
-                                <hr>                    
-                                <p>card total</p>
-                                <button class="btn check_out">Check Out</button>`
                 
-                if(add){
-                    
-                    num.innerHTML = score + 1            
-                    order.innerHTML = summary
-                    
-                    check.innerHTML += `<div class="result">
-                                            <p>${num.parentElement}</p>
-                                            <p>${score}</p>
-                                            <p>$23</p>
-                                        </div>`
-                    
+                if(add){                   
+                    num.innerHTML = score + 1                                
                 }else if(minus){
                     if( score > 0){
                         num.innerHTML = score - 1
@@ -169,8 +149,6 @@
             })         
         }).catch(err => console.log(err))  
     </script>
-    
-    <script src="/pancake_manor/javascript/booking.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>

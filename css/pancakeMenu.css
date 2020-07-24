@@ -131,22 +131,6 @@ label{
 .menu-right>.btn{
     margin: 3em 0;
 }
-
-.order{
-    width: 80%;
-    background: #fff;
-    margin: auto;  
-    text-align: left;
-    padding: 5em;
-}
-.result{
-    display:flex;
-    justify-content: space-between;
-}
-.order hr{
-    border: 1px solid rgba(233, 225, 225, 1);
-
-}
 .check_out{
     border: 1px solid gray;
     position: relative;
@@ -274,4 +258,9 @@ footer{
         }
     }
     
+}
+@media screen and (max-width:400px){
+    .title h1{
+        font-size: 30px;
+    }
 }

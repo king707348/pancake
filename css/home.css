@@ -265,3 +265,8 @@ footer{
     }
 
 }
+@media screen and (max-width:400px){
+    .title h1{
+        font-size: 30px;
+    }
+}
