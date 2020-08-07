@@ -59,28 +59,37 @@
                 <div class="feedback">
                     <h1>FEEDBACK & CONTACT FORM</h1>
                     <hr class="midhr">
-                    <form action="">
+                    <form action="feedback.html" method="GET">
                         <div class="input_content">
-                            <input type="text" class="input" id="name" placeholder="Name*" required>
+                            <label for="name">Name</label>
+                            <input type="text" name="name" class="input" id="name" placeholder="Name*" required>
                         </div>
                         <div class="input_content">
-                            <input type="text" id="email" placeholder="Email*" required>
+                            <label for="email">Email</label>
+                            <input type="text" name="email" id="email" placeholder="Email*" required>
                             <p class="feedback"></p>
                         </div>
                         <div class="input_content">
-                            <input type="text" id="phone" placeholder="Phone">
-                        </div>
-                        <div class="input_content radio">
-                            <span>LOCATIONS:</span>
-                            <input type="radio" id="r1" name="rr">
-                            <span class="ps1">CBD</span>
-                            <input type="radio" id="r2" name="rr">
-                            <span class="ps2">Garden City</span>
+                            <label for="phone">Phone</label>
+                            <input type="text" name="phone" id="phone" placeholder="Phone">
                         </div>
                         <div class="input_content">
-                            <input type="text" id="subject" placeholder="Subject">
+                            <span>LOCATIONS:</span>
+                            <select name="lacation">
+                                <option value="CBD">CBD</option>
+                                <option value="GardenCity">GardenCity</option>
+                            </select>
                         </div>
-                        <textarea name="" id="text"  cols="40" rows="5" placeholder="Message"></textarea>
+                        <div class="input_content">
+                            <span>Subject</span>
+                            <select name="subject'">
+                                <option value="服務">Service</option>
+                                <option value="環境">Environment</option>
+                                <option value="衛生">Health</option>
+                                <option value="其他">Other</option>
+                            </select>
+                        </div>
+                        <textarea name="content" id="text"  cols="40" rows="5" placeholder="Message"></textarea>
                         <button class="btn btn-primary">Submit</button>
                     </form>
                 </div>
@@ -130,6 +139,9 @@
                 map:locMap2
             })
         }
+    </script>
+    <script>
+
     </script>
     <script src="javascript/forms.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>

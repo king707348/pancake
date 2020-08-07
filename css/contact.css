@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Aclonica&family=Galada&display=swap&family=Noto+Serif:ital,wght@1,700');
+@import url('https://fonts.googleapis.com/css2?family=Aclonica&family=Galada&display=swap&family=Noto+Serif:ital,wght@1,700&family=Lemonada:wght@300&display=swap');
 *{
     margin: 0;
     padding: 0;
@@ -19,7 +19,7 @@ a{
 }
 .midhr{
     width: 90%;
-    margin: 1em auto 1em;
+    margin: 6px auto 1em;
     border: .5px solid #E5C282;
 }
 .smallhr,#navbar,label,.divbar li ul{
@@ -80,11 +80,15 @@ label{
 
 /*main*/
 .main{
-    font-family: 'Noto Serif', serif;
+    font-family: 'Lemonada', cursive;
     text-align: center;
     width: 100%;
     color: #7A674E;
     background: #FBEDD5;
+}
+.main h1{
+    margin-top: 6px;
+    margin-bottom: 0;
 }
 .loc{
     font-size: 14px;
@@ -108,6 +112,8 @@ p{
 textarea{
     display: block;
     margin: auto;
+    padding: 3px;
+    font-family: 'Lemonada', cursive;
 } 
 ::placeholder{
     color: rgba(0,0,0,.3);
@@ -115,9 +121,15 @@ textarea{
 .btn{
     margin: 6px 0;
 }
-#r1:checked~.ps1,#r2:checked~.ps2{
-    color: red;
-    font-size: 20px;
+.input_content label{
+    position: relative;
+    display: block;
+    border: none;
+    margin: auto;
+}
+.radio label{
+    margin: 0;
+    display: inline-block;
 }
 
 /*footer*/
@@ -154,6 +166,7 @@ footer{
        margin: 0;
     }
 }
+
 @media screen and (max-width:990px){
     .title{
         height: 15vh;
@@ -162,7 +175,6 @@ footer{
         font-size: 3em;
     }
 }
-
 
 @media screen and (max-width:768px){
     .container{
@@ -206,9 +218,9 @@ footer{
         to{
             top: 0;
         }
-    }
-    
+    } 
 }
+
 @media screen and (max-width:600px){
     .container{
         width: 100%;
@@ -217,6 +229,7 @@ footer{
         width: 80%;
     }
 }
+
 @media screen and (max-width:400px){
     .title h1{
         font-size: 30px;

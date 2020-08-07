@@ -12,14 +12,14 @@ form.addEventListener("input",function(e){
             feedback.innerHTML = ""
             feedback.classList.add("text-danger","text-success")
         }else{           
-            feedback.innerHTML = `not email form`
+            feedback.innerHTML = `email format error`
             feedback.classList.replace("text-danger")
         }
     }
 })
-btn.addEventListener("submit",function(e){
+/*btn.addEventListener("submit",function(e){
     e.preventDefault()
     form.submit()
-})
+})*/
 
 
